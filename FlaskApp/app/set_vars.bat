@@ -1,5 +1,5 @@
-set MAIL_SERVER=smtp.googlemail.com
-set MAIL_PORT=587
+set MAIL_SERVER=localhost
+set MAIL_PORT=8025
 set MAIL_USE_TLS=1
-set MAIL_USERNAME=chrisk0208@gmail.com
-set MAIL_PASSWORD=2018ckim1@
+set MAIL_USERNAME= chrisk0208
+set MAIL_PASSWORD= 

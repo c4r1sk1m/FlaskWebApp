@@ -99,3 +99,4 @@ ValueError: not enough values to unpack (expected 2, got 1)
 2018-12-06 15:05:12,759 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
 2018-12-06 15:06:27,258 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
 2018-12-06 15:07:57,240 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 15:27:02,303 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]
