@@ -1,5 +1,0 @@
-set MAIL_SERVER=localhost
-set MAIL_PORT=8025
-set MAIL_USE_TLS=1
-set MAIL_USERNAME= chrisk0208
-set MAIL_PASSWORD= 
