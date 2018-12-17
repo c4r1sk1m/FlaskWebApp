@@ -1,1 +1,8 @@
 python -m smtpd -n -c DebuggingServer localhost:8025
+
+updating database models:
+flask db migrate -m "<Change Description>"
+flask db upgrade
+
+
+translator api key: 12211e76aa90453ba20e0d1622e731a7

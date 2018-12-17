@@ -1,2 +1,6 @@
 set_vars.bat
+
 FlaskApp/app/set_vars.bat
+
+info.txt
+setproxy.bat
