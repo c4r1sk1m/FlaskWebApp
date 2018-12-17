@@ -1,4 +1,25 @@
-2018-12-06 13:55:54,357 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+2018-12-06 14:23:39,545 ERROR: Exception on /explore [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 156, in explore
+    page, app.config['POSTS_PER_PAGE'], False)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 485, in paginate
+    if per_page < 0:
+TypeError: '<' not supported between instances of 'UnboundField' and 'int'
+2018-12-06 14:23:40,147 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
     response = self.full_dispatch_request()
@@ -15,27 +36,11 @@ Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
   File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 36, in index
-    return render_template('index.html',title ='Home',form=form, posts=posts)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 23, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 18, in block "content"
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2018-12-06 13:55:55,066 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+    page, app.config['POSTS_PER_PAGE'], False)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 485, in paginate
+    if per_page < 0:
+TypeError: '<' not supported between instances of 'UnboundField' and 'int'
+2018-12-06 14:23:41,254 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
     response = self.full_dispatch_request()
@@ -52,27 +57,11 @@ Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
   File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 36, in index
-    return render_template('index.html',title ='Home',form=form, posts=posts)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 23, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 18, in block "content"
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2018-12-06 13:55:55,889 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+    page, app.config['POSTS_PER_PAGE'], False)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 485, in paginate
+    if per_page < 0:
+TypeError: '<' not supported between instances of 'UnboundField' and 'int'
+2018-12-06 14:25:15,205 ERROR: Exception on /explore [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
     response = self.full_dispatch_request()
@@ -88,28 +77,29 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 36, in index
-    return render_template('index.html',title ='Home',form=form, posts=posts)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 156, in explore
+    page, app.config['POSTS_PER_PAGE'], False)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 485, in paginate
+    if per_page < 0:
+TypeError: '<' not supported between instances of 'UnboundField' and 'int'
+2018-12-06 14:25:17,627 ERROR: Exception on /user/chrisk0208 [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 23, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 18, in block "content"
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2018-12-06 13:57:01,358 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 13:57:38,729 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 13:58:29,975 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:23:35,345 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 92, in user
+    page, app.config['POSTS_PER_PAGE'], False)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 485, in paginate
+    if per_page < 0:
+TypeError: '<' not supported between instances of 'UnboundField' and 'int'

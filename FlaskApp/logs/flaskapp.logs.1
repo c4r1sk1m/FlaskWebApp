@@ -1,4 +1,4 @@
-2018-12-06 14:28:44,468 ERROR: Exception on /index [POST] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+2018-12-06 14:46:07,213 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,20 +14,36 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 25, in index
-    if pageForm.validate_on_submit():
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_wtf\form.py", line 101, in validate_on_submit
-    return self.is_submitted() and self.validate()
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\form.py", line 310, in validate
-    return super(Form, self).validate(extra)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\form.py", line 152, in validate
-    if not field.validate(self, extra):
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\fields\core.py", line 195, in validate
-    self.pre_validate(form)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\fields\core.py", line 471, in pre_validate
-    for v, _ in self.choices:
-TypeError: 'int' object is not iterable
-2018-12-06 14:28:49,748 ERROR: Exception on /index [POST] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 43, in index
+    prev_url=prev_url)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 23, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 31, in block "content"
+    {{ pageForm.items()}}
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\fields\core.py", line 155, in __call__
+    return self.meta.render_field(self, kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\meta.py", line 56, in render_field
+    return field.widget(field, **render_kw)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\widgets\core.py", line 323, in __call__
+    for val, label, selected in field.iter_choices():
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\fields\core.py", line 454, in iter_choices
+    for value, label in self.choices:
+ValueError: not enough values to unpack (expected 2, got 1)
+2018-12-06 14:46:09,137 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
     response = self.full_dispatch_request()
@@ -43,36 +59,54 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 25, in index
-    if pageForm.validate_on_submit():
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_wtf\form.py", line 101, in validate_on_submit
-    return self.is_submitted() and self.validate()
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\form.py", line 310, in validate
-    return super(Form, self).validate(extra)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\form.py", line 152, in validate
-    if not field.validate(self, extra):
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\fields\core.py", line 195, in validate
-    self.pre_validate(form)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\fields\core.py", line 471, in pre_validate
-    for v, _ in self.choices:
-TypeError: 'int' object is not iterable
-2018-12-06 14:31:38,632 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:31:50,160 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:32:23,861 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:32:40,076 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:32:59,146 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:33:13,058 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:33:31,137 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:34:02,155 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:35:00,761 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:35:17,209 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:35:40,958 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:36:00,296 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:36:30,586 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:36:52,397 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:37:25,588 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:37:41,188 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:39:03,188 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:39:56,217 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:43:45,010 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:46:05,193 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 43, in index
+    prev_url=prev_url)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 23, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 31, in block "content"
+    {{ pageForm.items()}}
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\fields\core.py", line 155, in __call__
+    return self.meta.render_field(self, kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\meta.py", line 56, in render_field
+    return field.widget(field, **render_kw)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\widgets\core.py", line 323, in __call__
+    for val, label, selected in field.iter_choices():
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\fields\core.py", line 454, in iter_choices
+    for value, label in self.choices:
+ValueError: not enough values to unpack (expected 2, got 1)
+2018-12-06 14:48:32,797 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 14:51:19,449 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 14:53:17,317 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 14:53:48,298 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 14:57:20,579 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 14:57:50,063 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 15:01:53,604 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 15:04:26,321 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 15:05:12,759 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 15:06:27,258 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 15:07:57,240 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 15:27:02,303 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]
+2018-12-06 17:13:36,023 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]
+2018-12-13 14:40:50,542 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]
+2018-12-17 09:09:50,898 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]
+2018-12-17 09:18:44,268 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]
+2018-12-17 09:22:04,336 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]
+2018-12-17 09:43:03,974 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]
+2018-12-17 10:11:19,228 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]
+2018-12-17 10:18:57,324 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]
+2018-12-17 10:21:15,463 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]
+2018-12-17 10:36:41,524 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]

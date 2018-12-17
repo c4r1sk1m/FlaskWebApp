@@ -51,3 +51,12 @@ class ItemViewForm(FlaskForm):
 	numberOfPosts = [('1', '1'),('3','3'), ('5','5'), ('10','10')]
 	items = SelectField('Posts per page', choices= numberOfPosts, validators = [DataRequired()])
 	submit = SubmitField('Set')
+
+class ResetPasswordRequestForm(FlaskForm):
+	email = StringField('Email', validators= [DataRequired(), Email()])
+	submit = SubmitField('Request Password Reset')
+
+class ResetPasswordForm(FlaskForm):
+	password = PasswordField('Password', validators=[DataRequired()])
+	password2 = PasswordField('Repeat Password', validators=[DataRequired(), EqualTo('password')])
+	submit = SubmitField('Request Password Reset')

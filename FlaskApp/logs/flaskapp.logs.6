@@ -1,43 +1,4 @@
-2018-12-06 11:58:23,305 ERROR: Exception on /index [POST] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
-Traceback (most recent call last):
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 25, in index
-    post = Post(body.form.data, author=current_user)
-NameError: name 'body' is not defined
-2018-12-06 11:58:26,007 ERROR: Exception on /index [POST] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
-Traceback (most recent call last):
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 25, in index
-    post = Post(body.form.data, author=current_user)
-NameError: name 'body' is not defined
-2018-12-06 11:58:50,841 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 11:58:54,795 ERROR: Exception on /index [POST] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+2018-12-06 12:01:56,121 ERROR: Exception on /index [POST] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
     context)
@@ -109,5 +70,48 @@ Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\sqlalchemy\engine\default.py", line 509, in do_execute
     cursor.execute(statement, parameters)
 sqlalchemy.exc.InterfaceError: <unprintable InterfaceError object>
-2018-12-06 12:01:32,025 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 12:01:51,823 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 12:03:07,403 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 12:03:53,280 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 12:09:51,772 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 12:09:54,679 ERROR: Exception on /explore [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 135, in explore
+    return render_template('index.html',title='Explore', posts=posts)
+NameError: name 'posts' is not defined
+2018-12-06 12:11:45,253 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 13:49:53,041 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 13:54:11,494 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
+2018-12-06 13:54:20,609 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 31, in index
+    posts = current_user.followed_posts().all().paginate(page, app.config['POSTS_PER_PAGE'], False)
+AttributeError: 'list' object has no attribute 'paginate'
+2018-12-06 13:55:32,878 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]

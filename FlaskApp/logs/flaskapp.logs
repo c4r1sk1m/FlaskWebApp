@@ -1,4 +1,4 @@
-2018-12-06 14:46:07,213 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+2018-12-17 10:37:10,648 ERROR: Exception on /reset_password_request [POST] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,91 +12,11 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 43, in index
-    prev_url=prev_url)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 23, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 31, in block "content"
-    {{ pageForm.items()}}
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\fields\core.py", line 155, in __call__
-    return self.meta.render_field(self, kwargs)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\meta.py", line 56, in render_field
-    return field.widget(field, **render_kw)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\widgets\core.py", line 323, in __call__
-    for val, label, selected in field.iter_choices():
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\fields\core.py", line 454, in iter_choices
-    for value, label in self.choices:
-ValueError: not enough values to unpack (expected 2, got 1)
-2018-12-06 14:46:09,137 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
-Traceback (most recent call last):
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 43, in index
-    prev_url=prev_url)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 23, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 31, in block "content"
-    {{ pageForm.items()}}
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\fields\core.py", line 155, in __call__
-    return self.meta.render_field(self, kwargs)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\meta.py", line 56, in render_field
-    return field.widget(field, **render_kw)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\widgets\core.py", line 323, in __call__
-    for val, label, selected in field.iter_choices():
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\fields\core.py", line 454, in iter_choices
-    for value, label in self.choices:
-ValueError: not enough values to unpack (expected 2, got 1)
-2018-12-06 14:48:32,797 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:51:19,449 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:53:17,317 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:53:48,298 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:57:20,579 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 14:57:50,063 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 15:01:53,604 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 15:04:26,321 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 15:05:12,759 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 15:06:27,258 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 15:07:57,240 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:43]
-2018-12-06 15:27:02,303 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]
+  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 178, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Projects\AppServer\FlaskApp\app\email.py", line 21, in send_password_reset_email
+    user=user, token=token))
+  File "C:\Projects\AppServer\FlaskApp\app\email.py", line 32, in send_email
+    Thread(target=send_async_email, args=(app, msg)).start()
+NameError: name 'send_async_email' is not defined
+2018-12-17 10:39:07,991 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:45]
