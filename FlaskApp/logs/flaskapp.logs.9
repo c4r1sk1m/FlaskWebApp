@@ -1,4 +1,4 @@
-2018-12-06 11:50:38,768 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+2018-12-17 11:04:57,985 ERROR: Exception on /login [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,10 +12,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 34, in index
-    return render_template('index.html',title ='Home',posts=posts)
+  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 66, in login
+    return render_template('login.html',title='Sign In', form = form)
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 135, in render_template
     context, ctx.app)
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 117, in _render
@@ -28,16 +26,16 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 1, in top-level template code
+  File "C:\Projects\AppServer\FlaskApp\app\templates\login.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 21, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-12-06 11:50:39,729 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap/base.html
+2018-12-17 11:04:58,053 ERROR: Exception on /login [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
     response = self.full_dispatch_request()
@@ -51,10 +49,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 34, in index
-    return render_template('index.html',title ='Home',posts=posts)
+  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 66, in login
+    return render_template('login.html',title='Sign In', form = form)
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 135, in render_template
     context, ctx.app)
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 117, in _render
@@ -67,16 +63,16 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 1, in top-level template code
+  File "C:\Projects\AppServer\FlaskApp\app\templates\login.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 21, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2018-12-06 11:50:40,225 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap/base.html
+2018-12-17 11:04:58,098 ERROR: Exception on /login [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
     response = self.full_dispatch_request()
@@ -90,10 +86,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 34, in index
-    return render_template('index.html',title ='Home',posts=posts)
+  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 66, in login
+    return render_template('login.html',title='Sign In', form = form)
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 135, in render_template
     context, ctx.app)
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 117, in _render
@@ -106,12 +100,22 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 1, in top-level template code
+  File "C:\Projects\AppServer\FlaskApp\app\templates\login.html", line 1, in top-level template code
     {% extends "base.html" %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 21, in top-level template code
-    {% block content %}{% endblock %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
+  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bootstrap/base.html
+2018-12-17 11:05:54,677 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:06:35,680 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:06:53,445 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:07:19,066 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:12:42,773 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:13:51,159 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:15:00,904 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:16:43,342 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:17:41,621 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:18:38,556 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]

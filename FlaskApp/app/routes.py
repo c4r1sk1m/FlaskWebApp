@@ -152,9 +152,17 @@ def unfollow(username):
 
 
 # Find Other users
-@app.route('/explore')
+@app.route('/explore', methods=['GET','POST'])
 @login_required
 def explore():
+	pageForm = ItemViewForm()
+	if pageForm.validate_on_submit():
+		numItems = pageForm.items.data
+		print(numItems)
+		app.config['POSTS_PER_PAGE'] = int(numItems)
+		flash('Posts per page updated')
+		return redirect(url_for('explore'))	
+
 	page = request.args.get('page', 1, type=int)
 	posts = Post.query.order_by(Post.timestamp.desc()).paginate(
 		page, app.config['POSTS_PER_PAGE'], False)
@@ -162,7 +170,7 @@ def explore():
 		if posts.has_next else None
 	prev_url = url_for('explore', page=posts.prev_num) \
 		if posts.has_prev else None
-	return render_template("index.html", title='Explore', posts=posts.items,
+	return render_template("index.html", title='Explore', posts=posts.items,pageForm=pageForm,
 						  next_url=next_url, prev_url=prev_url)
 
 
