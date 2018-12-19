@@ -1,0 +1,104 @@
+2018-12-19 11:31:07,906 ERROR: Exception on /search [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Projects\AppServer\FlaskApp\app\main\routes.py", line 156, in search
+    posts, total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Projects\AppServer\FlaskApp\app\models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Projects\AppServer\FlaskApp\app\search.py", line 22, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\client\__init__.py", line 660, in search
+    doc_type, '_search'), params=params, body=body)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\transport.py", line 318, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 186, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\connection\base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index')
+2018-12-19 11:31:09,786 ERROR: Exception on /search [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Projects\AppServer\FlaskApp\app\main\routes.py", line 156, in search
+    posts, total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Projects\AppServer\FlaskApp\app\models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Projects\AppServer\FlaskApp\app\search.py", line 22, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\client\__init__.py", line 660, in search
+    doc_type, '_search'), params=params, body=body)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\transport.py", line 318, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 186, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\connection\base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index')
+2018-12-19 11:37:31,376 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 11:38:07,012 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 11:38:32,607 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 11:38:39,608 ERROR: Exception on /search [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Projects\AppServer\FlaskApp\app\main\routes.py", line 156, in search
+    posts, total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Projects\AppServer\FlaskApp\app\models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Projects\AppServer\FlaskApp\app\search.py", line 22, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\client\__init__.py", line 660, in search
+    doc_type, '_search'), params=params, body=body)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\transport.py", line 318, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 186, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\connection\base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index')
+2018-12-19 11:42:11,802 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 11:46:15,198 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]

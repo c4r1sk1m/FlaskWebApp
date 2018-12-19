@@ -1,0 +1,95 @@
+2018-12-19 10:56:32,662 ERROR: Exception on /index [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1810, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2086, in preprocess_request
+    rv = func()
+  File "C:\Projects\AppServer\FlaskApp\app\main\routes.py", line 19, in before_request
+    g.search_form = SearchForm()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\wtforms\form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "C:\Projects\AppServer\FlaskApp\app\main\forms.py", line 43, in __init__
+    super(SearchForm, self).__init(*args, **kwargs)
+AttributeError: 'super' object has no attribute '_SearchForm__init'
+2018-12-19 10:57:04,978 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 10:57:32,316 ERROR: Exception on /search [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 172, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=Retry(False), headers=request_headers, **kw)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\util\retry.py", line 343, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\packages\six.py", line 686, in reraise
+    raise value
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\http\client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\http\client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\http\client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\http\client.py", line 1026, in _send_output
+    self.send(msg)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\http\client.py", line 964, in send
+    self.connect()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x07D35150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Projects\AppServer\FlaskApp\app\main\routes.py", line 156, in search
+    posts, total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Projects\AppServer\FlaskApp\app\models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Projects\AppServer\FlaskApp\app\search.py", line 22, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\client\__init__.py", line 660, in search
+    doc_type, '_search'), params=params, body=body)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\transport.py", line 318, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 181, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x07D35150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x07D35150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it)

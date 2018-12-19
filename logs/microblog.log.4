@@ -1,0 +1,113 @@
+2018-12-19 11:46:19,179 ERROR: Exception on /search [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Projects\AppServer\FlaskApp\app\main\routes.py", line 156, in search
+    posts, total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Projects\AppServer\FlaskApp\app\models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Projects\AppServer\FlaskApp\app\search.py", line 21, in query_index
+    body={'query': {'multi_match': {'query': query, 'fields': ['*']}},'from': (page - 1) * per_page, 'size': per_page})
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\client\__init__.py", line 660, in search
+    doc_type, '_search'), params=params, body=body)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\transport.py", line 318, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 186, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\elasticsearch\connection\base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index')
+2018-12-19 11:48:19,021 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 11:48:38,862 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 11:48:42,592 ERROR: Exception on /search [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Projects\AppServer\FlaskApp\app\main\routes.py", line 161, in search
+    return render_template('search.html', title=_('Search'), posts=posts, next_url=next_url, prev_url=prev_url)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Projects\AppServer\FlaskApp\app\templates\search.html", line 1, in template
+    {{% extends base.html %}}
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 875, in subparse
+    add_data(self.parse_tuple(with_condexpr=True))
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 620, in parse_tuple
+    args.append(parse())
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 432, in parse_expression
+    return self.parse_condexpr()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 437, in parse_condexpr
+    expr1 = self.parse_or()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 450, in parse_or
+    left = self.parse_and()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 459, in parse_and
+    left = self.parse_not()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 470, in parse_not
+    return self.parse_compare()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 474, in parse_compare
+    expr = self.parse_math1()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 496, in parse_math1
+    left = self.parse_concat()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 507, in parse_concat
+    args = [self.parse_math2()]
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 517, in parse_math2
+    left = self.parse_pow()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 528, in parse_pow
+    left = self.parse_unary()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 546, in parse_unary
+    node = self.parse_primary()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 583, in parse_primary
+    self.fail("unexpected '%s'" % describe_token(token), token.lineno)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 59, in fail
+    raise exc(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: unexpected '%'
+2018-12-19 11:52:38,933 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 11:53:26,819 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 11:53:47,432 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 11:54:04,211 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 12:15:56,198 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 12:17:00,206 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 12:19:04,283 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]

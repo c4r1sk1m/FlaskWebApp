@@ -1,0 +1,72 @@
+2018-12-19 12:19:22,987 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 12:20:22,110 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 12:20:36,946 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 12:21:18,493 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 12:23:18,539 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 12:25:08,490 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 12:27:33,641 INFO: Microblog startup [in C:\Projects\AppServer\FlaskApp\app\__init__.py:78]
+2018-12-19 12:27:36,406 ERROR: Exception on /user/chrisk0208 [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1814, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1812, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Projects\AppServer\FlaskApp\app\main\routes.py", line 91, in user
+    next_url=next_url, prev_url=prev_url)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Projects\AppServer\FlaskApp\app\templates\_post.html", line 12, in template
+    {{username=user_name}}
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\Projects\AppServer\FlaskApp\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 59, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Projects\AppServer\FlaskApp\app\templates\user.html", line 25, in block "app_content"
+    {% include '_post.html' %}
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Projects\AppServer\FlaskApp\app\templates\_post.html", line 12, in template
+    {{username=user_name}}
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\parser.py", line 876, in subparse
+    self.stream.expect('variable_end')
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\lexer.py", line 384, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
