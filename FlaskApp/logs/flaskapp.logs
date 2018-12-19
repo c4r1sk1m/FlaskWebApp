@@ -1,4 +1,41 @@
-2018-12-17 11:40:27,862 ERROR: Exception on /login [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+2018-12-19 09:31:08,365 ERROR: Exception on /translate [POST] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x07971990>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.microsofttranslator.com', port=443): Max retries exceeded with url: /v2/Ajax.svc/Translate?text=%D0%9B%D0%BE%D1%80%D0%B5%D0%BC%20%D0%B8%D0%BF%D1%81%D1%83%D0%BC%20%D0%B4%D0%BE%D0%BB%D0%BE%D1%80%20%D1%81%D0%B8%D1%82%20%D0%B0%D0%BC%D0%B5%D1%82,%20%D0%BF%D0%B5%D1%80%20%D1%86%D0%BB%D0%B8%D1%82%D0%B0%20%D0%BF%D0%BE%D1%81%D1%81%D0%B8%D1%82%20%D0%B5%D1%85,%20%D0%B0%D1%82%20%D0%BC%D1%83%D0%BD%D0%B5%D1%80%D0%B5%20%D1%84%D0%B0%D0%B1%D1%83%D0%BB%D0%B0%D1%81%20%D0%BF%D0%B5%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%83%D0%BC%20%D1%81%D0%B8%D1%82.%20%D0%98%D1%83%D1%81%20%D1%86%D1%83%20%D1%86%D0%B8%D0%B1%D0%BE%20%D1%81%D0%B0%D0%BF%D0%B5%D1%80%D0%B5%D1%82%20%D1%81%D1%86%D1%80%D0%B8%D0%BF%D1%81%D0%B5%D1%80%D0%B8%D1%82,%20&from=bg&to=en (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x07971990>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,71 +49,21 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 1798, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 66, in login
-    return render_template('login.html',title='Sign In', form = form)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Projects\AppServer\FlaskApp\app\templates\login.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
-    {%- block html %}
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
-    {% block body -%}
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
-    {% block content -%}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\base.html", line 48, in block "content"
-    {% block app_content %}{% endblock %}
-  File "C:\Projects\AppServer\FlaskApp\app\templates\login.html", line 7, in block "app_content"
-    {{ wtf.quick_form(form) }}
-  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'wtf' is undefined
-2018-12-17 11:43:38,700 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
-2018-12-17 11:44:48,829 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
-2018-12-17 11:47:40,853 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
-2018-12-17 11:49:07,494 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
-2018-12-17 12:00:12,441 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:51]
-2018-12-17 12:03:18,949 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:51]
-2018-12-17 12:12:39,637 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:54]
-2018-12-17 12:14:00,137 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:54]
-2018-12-17 12:15:46,743 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:54]
-2018-12-17 12:20:01,649 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:54]
-2018-12-17 12:24:21,756 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 12:35:23,156 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 12:35:36,950 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 12:39:51,858 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 12:40:50,085 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 12:56:36,892 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 12:59:21,200 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 13:01:47,616 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 13:04:43,668 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 13:13:24,463 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 13:13:44,234 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 13:14:47,048 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 15:19:36,653 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 15:24:35,553 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 15:30:08,426 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 15:31:39,580 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 15:40:01,165 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 15:52:43,509 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 15:54:29,925 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 15:56:25,936 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 15:56:38,871 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 16:03:22,300 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 16:06:02,811 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 16:09:07,328 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
-2018-12-17 16:09:57,349 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Projects\AppServer\FlaskApp\app\routes.py", line 223, in translate_text
+    request.form['dest_language'])})
+  File "C:\Projects\AppServer\FlaskApp\app\translate.py", line 14, in translate
+    headers=auth)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\requests\api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.microsofttranslator.com', port=443): Max retries exceeded with url: /v2/Ajax.svc/Translate?text=%D0%9B%D0%BE%D1%80%D0%B5%D0%BC%20%D0%B8%D0%BF%D1%81%D1%83%D0%BC%20%D0%B4%D0%BE%D0%BB%D0%BE%D1%80%20%D1%81%D0%B8%D1%82%20%D0%B0%D0%BC%D0%B5%D1%82,%20%D0%BF%D0%B5%D1%80%20%D1%86%D0%BB%D0%B8%D1%82%D0%B0%20%D0%BF%D0%BE%D1%81%D1%81%D0%B8%D1%82%20%D0%B5%D1%85,%20%D0%B0%D1%82%20%D0%BC%D1%83%D0%BD%D0%B5%D1%80%D0%B5%20%D1%84%D0%B0%D0%B1%D1%83%D0%BB%D0%B0%D1%81%20%D0%BF%D0%B5%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%83%D0%BC%20%D1%81%D0%B8%D1%82.%20%D0%98%D1%83%D1%81%20%D1%86%D1%83%20%D1%86%D0%B8%D0%B1%D0%BE%20%D1%81%D0%B0%D0%BF%D0%B5%D1%80%D0%B5%D1%82%20%D1%81%D1%86%D1%80%D0%B8%D0%BF%D1%81%D0%B5%D1%80%D0%B8%D1%82,%20&from=bg&to=en (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x07971990>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it',))
+2018-12-19 09:32:41,253 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:56]

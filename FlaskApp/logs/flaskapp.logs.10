@@ -1,4 +1,4 @@
-2018-12-17 11:04:52,788 ERROR: Exception on /login [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+2018-12-17 11:04:57,985 ERROR: Exception on /login [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
     response = self.full_dispatch_request()
@@ -35,7 +35,7 @@ Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: bootstrap/base.html
-2018-12-17 11:04:52,852 ERROR: Exception on /login [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+2018-12-17 11:04:58,053 ERROR: Exception on /login [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
     response = self.full_dispatch_request()
@@ -72,7 +72,7 @@ Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: bootstrap/base.html
-2018-12-17 11:04:52,896 ERROR: Exception on /login [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
+2018-12-17 11:04:58,098 ERROR: Exception on /login [GET] [in c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py:1760]
 Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\app.py", line 2291, in wsgi_app
     response = self.full_dispatch_request()
@@ -109,3 +109,13 @@ Traceback (most recent call last):
   File "c:\users\rtcjk\appdata\local\programs\python\python36-32\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: bootstrap/base.html
+2018-12-17 11:05:54,677 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:06:35,680 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:06:53,445 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:07:19,066 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:12:42,773 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:13:51,159 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:15:00,904 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:16:43,342 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:17:41,621 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
+2018-12-17 11:18:38,556 INFO: FlaskApp [in C:\Projects\AppServer\FlaskApp\app\__init__.py:49]
